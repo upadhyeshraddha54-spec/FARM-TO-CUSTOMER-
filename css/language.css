@@ -1,0 +1,14 @@
+#languageSelect {
+  min-width: 105px;
+  max-width: 150px;
+  padding: 9px 10px;
+  border: 1px solid #d4dfd2;
+  border-radius: 7px;
+  background: white;
+  color: #243128;
+  cursor: pointer;
+}
+
+#languageSelect:focus {
+  outline: 2px solid #c5e1c8;
+}

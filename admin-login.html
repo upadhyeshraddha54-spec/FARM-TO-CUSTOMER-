@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal | Farm To Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/language.css">
+</head>
+<body class="auth-page">
+  <header class="navbar">
+    <a href="index.html" class="logo">Farm<span>To Home</span></a>
+    <div class="nav-actions">
+      <select id="languageSelect" aria-label="Choose language">
+        <option value="en">English</option>
+        <option value="mr">मराठी</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+      <a href="index.html" class="nav-link" data-i18n="home">Home</a>
+    </div>
+  </header>
+
+  <main class="auth-wrapper">
+    <section id="adminLoginCard" class="auth-card">
+      <div class="auth-icon">A</div>
+      <h1 data-i18n="adminTitle">Admin Login</h1>
+      <p class="auth-subtitle" data-i18n="adminSubtitle">
+        Sign in to manage the marketplace.
+      </p>
+
+      <form id="adminLoginForm">
+        <label for="adminEmail" data-i18n="email">Email</label>
+        <input id="adminEmail" type="email" required autocomplete="username">
+
+        <label for="adminPassword" data-i18n="password">Password</label>
+        <input id="adminPassword" type="password" required
+               autocomplete="current-password">
+
+        <button type="submit" class="btn btn-primary full-width"
+                data-i18n="adminSignIn">Sign In as Admin</button>
+        <p id="adminLoginMessage" class="form-message" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-note" data-i18n="adminWarning">
+        Demo only. Credentials in client-side code are not secure.
+      </p>
+    </section>
+
+    <section id="adminDashboard" class="dashboard-card hidden">
+      <div class="dashboard-heading">
+        <div>
+          <p class="eyebrow">ADMINISTRATION</p>
+          <h1 data-i18n="adminDashboard">Admin Dashboard</h1>
+          <p data-i18n="adminOverview">Marketplace overview</p>
+        </div>
+        <button id="adminLogout" class="btn btn-outline" data-i18n="logout">Logout</button>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span data-i18n="buyers">Buyers</span>
+          <strong id="buyerStat">0</strong>
+        </div>
+        <div class="stat-card">
+          <span data-i18n="sellers">Sellers</span>
+          <strong id="sellerStat">0</strong>
+        </div>
+        <div class="stat-card">
+          <span data-i18n="products">Products</span>
+          <strong id="productStat">0</strong>
+        </div>
+      </div>
+
+      <div class="admin-section">
+        <h2 data-i18n="registeredAccounts">Registered Accounts</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="name">Name</th>
+                <th data-i18n="email">Email</th>
+                <th data-i18n="role">Role</th>
+              </tr>
+            </thead>
+            <tbody id="adminAccounts"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="admin-section">
+        <h2 data-i18n="listedProducts">Listed Products</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="productName">Product</th>
+                <th data-i18n="seller">Seller</th>
+                <th data-i18n="price">Price</th>
+                <th data-i18n="action">Action</th>
+              </tr>
+            </thead>
+            <tbody id="adminProducts"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="auth-note" data-i18n="adminDataNote">
+        Prototype data is stored in this browser only.
+      </p>
+    </section>
+  </main>
+
+  <script src="js/language.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

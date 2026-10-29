@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyer Login | Farm To Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/language.css">
+</head>
+<body class="auth-page">
+  <header class="navbar">
+    <a href="index.html" class="logo">Farm<span>To Home</span></a>
+    <div class="nav-actions">
+      <select id="languageSelect" aria-label="Choose language">
+        <option value="en">English</option>
+        <option value="mr">मराठी</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+      <a href="index.html" class="nav-link" data-i18n="home">Home</a>
+    </div>
+  </header>
+
+  <main class="auth-wrapper">
+    <section class="auth-card">
+      <div class="auth-icon">B</div>
+      <h1 data-i18n="buyerWelcome">Buyer Account</h1>
+      <p class="auth-subtitle" data-i18n="buyerSubtitle">
+        Login or register to shop from local farmers.
+      </p>
+
+      <div class="tab-buttons">
+        <button type="button" class="tab-button active" id="loginTab"
+                data-i18n="login">Login</button>
+        <button type="button" class="tab-button" id="registerTab"
+                data-i18n="register">Register</button>
+      </div>
+
+      <form id="buyerLoginForm">
+        <label for="buyerLoginEmail" data-i18n="email">Email</label>
+        <input id="buyerLoginEmail" type="email" required autocomplete="username">
+
+        <label for="buyerLoginPassword" data-i18n="password">Password</label>
+        <input id="buyerLoginPassword" type="password" required
+               autocomplete="current-password">
+
+        <button class="btn btn-primary full-width" type="submit"
+                data-i18n="login">Login</button>
+        <p id="buyerLoginMessage" class="form-message" aria-live="polite"></p>
+      </form>
+
+      <form id="buyerRegisterForm" class="hidden">
+        <label for="buyerName" data-i18n="fullName">Full Name</label>
+        <input id="buyerName" type="text" required autocomplete="name">
+
+        <label for="buyerRegisterEmail" data-i18n="email">Email</label>
+        <input id="buyerRegisterEmail" type="email" required autocomplete="email">
+
+        <label for="buyerPhone" data-i18n="phone">Phone Number</label>
+        <input id="buyerPhone" type="tel" required pattern="[0-9]{10}"
+               maxlength="10" autocomplete="tel">
+
+        <label for="buyerRegisterPassword" data-i18n="password">Password</label>
+        <input id="buyerRegisterPassword" type="password" required minlength="6"
+               autocomplete="new-password">
+
+        <button class="btn btn-primary full-width" type="submit"
+                data-i18n="createAccount">Create Account</button>
+        <p id="buyerRegisterMessage" class="form-message" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-note" data-i18n="demoWarning">
+        Prototype only. Do not use real passwords.
+      </p>
+      <a href="index.html#products" class="text-link" data-i18n="continueShopping">
+        Continue browsing products
+      </a>
+    </section>
+  </main>
+
+  <script src="js/language.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

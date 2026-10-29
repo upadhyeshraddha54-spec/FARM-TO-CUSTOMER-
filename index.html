@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm To Home | Fresh From Farmers</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/language.css">
+</head>
+<body>
+  <div class="top-strip">
+    Fresh from local farms • Support Indian farmers
+  </div>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">Farm<span>To Home</span></a>
+
+    <div class="search-box">
+      <input id="searchInput" type="search"
+             placeholder="Search vegetables, fruits, grains...">
+      <button id="searchButton" aria-label="Search">Search</button>
+    </div>
+
+    <div class="nav-actions">
+      <select id="languageSelect" aria-label="Choose language">
+        <option value="en">English</option>
+        <option value="mr">मराठी</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+      <a href="buyer-login.html" class="nav-link" data-i18n="login">Login</a>
+      <button id="cartButton" class="cart-button">
+        🛒 <span data-i18n="cart">Cart</span>
+        (<span id="cartCount">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <nav class="category-nav">
+    <a href="#products" data-category="All" data-i18n="allProducts">All Products</a>
+    <a href="#products" data-category="Vegetables" data-i18n="vegetables">Vegetables</a>
+    <a href="#products" data-category="Fruits" data-i18n="fruits">Fruits</a>
+    <a href="#products" data-category="Grains" data-i18n="grains">Grains</a>
+    <a href="#products" data-category="Dairy" data-i18n="dairy">Dairy</a>
+    <a href="seller-login.html" data-i18n="sell">Sell on Farm To Home</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-label" data-i18n="heroLabel">FRESH • LOCAL • NATURAL</span>
+        <h1 data-i18n="heroTitle">Fresh from the farm, delivered to your home.</h1>
+        <p data-i18n="heroText">
+          Shop directly from farmers. Discover fresh vegetables, seasonal
+          fruits, grains and more at one place.
+        </p>
+        <a href="#products" class="btn btn-primary" data-i18n="shopNow">
+          Shop Products
+        </a>
+      </div>
+    </section>
+
+    <section class="role-strip">
+      <div>
+        <p class="eyebrow" data-i18n="growTogether">GROW TOGETHER</p>
+        <h2 data-i18n="roleTitle">One platform for farmers and families</h2>
+        <p data-i18n="roleText">Buy fresh produce or bring your farm products online.</p>
+      </div>
+      <div class="role-actions">
+        <a href="buyer-login.html" class="btn btn-primary" data-i18n="buyerLogin">
+          Buyer Login
+        </a>
+        <a href="seller-login.html" class="btn btn-outline" data-i18n="sellerLogin">
+          Seller / Farmer Login
+        </a>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow" data-i18n="freshPicks">FRESH PICKS</p>
+          <h2 data-i18n="popularProducts">Popular Farm Products</h2>
+        </div>
+        <span id="productCount" class="muted"></span>
+      </div>
+
+      <div id="productsGrid" class="products-grid"></div>
+      <p id="emptyProducts" class="empty-state hidden">
+        No products found. Try another search or category.
+      </p>
+    </section>
+
+    <section class="seller-banner">
+      <div>
+        <p class="eyebrow" data-i18n="forFarmers">FOR FARMERS</p>
+        <h2 data-i18n="sellerBannerTitle">Have fresh produce to sell?</h2>
+        <p data-i18n="sellerBannerText">
+          Create a seller account and showcase your products to customers.
+        </p>
+      </div>
+      <a href="seller-login.html" class="btn btn-light" data-i18n="startSelling">
+        Start Selling
+      </a>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2 data-i18n="contactUs">Contact Us</h2>
+      <p>Phone: <a href="tel:+919021577406">9021577406</a></p>
+      <p>Email: <a href="mailto:renuh2006@gmail.com">renuh2006@gmail.com</a></p>
+      <a href="https://wa.me/919021577406" target="_blank"
+         rel="noopener noreferrer">Contact us on WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Farm To Home. <span data-i18n="footer">Supporting local farmers.</span></p>
+    <a href="admin-login.html" class="admin-footer-link" data-i18n="admin">Admin</a>
+  </footer>
+
+  <div id="cartPanel" class="cart-panel hidden" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2 data-i18n="yourCart">Your Cart</h2>
+      <button id="closeCart" class="icon-button" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-total">
+      <strong data-i18n="total">Total</strong>
+      <strong id="cartTotal">₹0</strong>
+    </div>
+    <button id="checkoutButton" class="btn btn-primary full-width"
+            data-i18n="checkout">Proceed to Checkout</button>
+    <p id="cartMessage" class="form-message" aria-live="polite"></p>
+  </div>
+  <div id="cartBackdrop" class="cart-backdrop hidden"></div>
+
+  <script src="js/language.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
